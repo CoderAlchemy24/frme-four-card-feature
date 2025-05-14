@@ -43,6 +43,6 @@ Users should be able to:
 
 ### Author
 
-- Author: [@CoderAlchemy24]
+- Author: @CoderAlchemy24
 
 
