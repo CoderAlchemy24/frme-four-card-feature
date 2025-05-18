@@ -55,18 +55,18 @@ body{
     background-color: #FAFAFA;
 
     display: flex;
-    margin: var(--spacing-400);
+    margin: var(--spacing-400) auto;
     flex-direction: column;
     justify-self: center;
     align-items: center;
 
-    gap:0
     
     
 }
 
 header{
-    width:540px;
+    width: 50%;
+    max-width:540px;
     height: 158px;;
    
     background-color: #FAFAFA;
@@ -110,17 +110,18 @@ header p{
 
 main{
 
-    width: 114px;
-    height: fit-content;
+    width: 94%;
+    max-width: 1114px;;
+    height: 532px;
     background-color: #FAFAFA;
 
     flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: var(--spacing-100);
   
-   
+   margin:auto;
    
 }
 
@@ -130,17 +131,18 @@ main{
 }
 
 .card{
-     width:350px;
-     height: 250px;
+   
+     max-width:350px;
+     max-height: 250px;
 
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
-    padding: var(--spacing-400);
+    padding: var(--spacing-200);
     
-    gap: var(--spacing-400);
+    gap: var(--spacing-100);
 
     border-radius: var(--spacing-100, 8px);
     background: var(--color-white, #FFF);
@@ -182,60 +184,102 @@ main{
     padding-bottom: var(--spacing-400);
 }
 
-@media screen and (max-width: 860px){
+@media screen and (max-width: 1024px){
 
     body{
-         width: fit-content;
-    
+         width: max-content;
+         
         }
 
-    card{
-         width:314px;
-        height: 250px;
+    header{
+        width:540px;
+        height: 158px;
+    }
+    main{
+        width:100%;
+        max-width: 760px;
+        height: 65%;
+        max-height: 814px;
+
+        flex-direction: column;
+        margin: var(--spacing-0);
+        padding: var(--spacing-100);
+        gap: var(--spacing-100);
+    }
+
+
+     .card-container-2{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:0;
+        padding: var(--spacing-100);
+     }
+    .card{
+        width: 100%;
+        max-width:314px;
+        
+        max-height: 250px;
+
+        margin: var(--spacing-200);
+        padding: var(--spacing-200);
+        gap: var(--spacing-200);
     }
     }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     
     body{
    
-     width: fit-content;
-     max-width: 600px;
+     width: 100%;
+     max-width: 750px;
 
+      height:calc(max-content + var(--spacing-500)*2);
+
+     margin: var(--spacing-500) auto;
+     padding-top: var(--spacing-300);
+     padding-bottom: var(--spacing-300);
    
      display: flex;
      margin: var(--spacing-400) var(--spacing-300);
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     /* gap: 4px; */
+     
     }
 
     header{
-        margin:0;
 
+        width:100%;
+        
+        max-width: 750px;
+       
+        margin: var(--spacing-500) auto;
+        padding: var(--spacing-400);
         
     }
 
     header h1{
-         max-width: 300px;
-        font-size: 1.15em; 
+         max-width: 720px;
+     
         text-align: center;
 
     }
 
     header h2{
-         max-width: 300px;
-        font-size: 1.15em; 
+         max-width: 720px;
+   
         text-align: center;
 
     }
 
     header p{
-      /* font-size: 0.5em; */
-       max-width: 300px;
+     
+       max-width: 720px;
          font-weight: var(--font-weight-preset-4);
         text-align: center;
+
+         margin-bottom: var(--spacing-500);
+          padding-bottom: var(--spacing-200 ); 
     }
 
     main{
@@ -246,15 +290,15 @@ main{
         justify-content: center;
         align-items: center;
 
-
-
+        margin-bottom: var(--spacing-500);
+        margin-top: var(--spacing-500);
     }
 
     .card{
         width:314px;
-        height: 250px;
+        max-height: 250px;
 
-        margin: var(--spacing-300);
+        margin: var(--spacing-200);
     }
 
     .card h3{
@@ -280,3 +324,86 @@ main{
     
 } 
     
+@media screen and (max-width: 425px){
+
+    body{
+        width: 100%;
+        
+        max-width: 375px;
+
+        height:calc(max-content + var(--spacing-500)*4);
+
+        margin: var(--spacing-100) auto calc(var(--spacing-500)*3);
+        padding: var(--spacing-100);
+
+    }
+
+    header{
+        width:100%;
+        max-width: 370px;
+        height: auto;
+
+        margin: var(--spacing-200) 4px var(--spacing-200);
+        
+        
+       
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FAFAFA;
+
+        gap: var(--spacing-100);
+    }
+
+    header h1{
+         max-width: 370px;
+     
+        text-align: center;
+        
+    }
+
+    header h2{
+         max-width: 370px;
+   
+        text-align: center;
+
+    }
+
+    header p{
+      /* font-size: 0.5em; */
+       max-width: 370px;
+         font-weight: var(--font-weight-preset-4);
+        text-align: center;
+
+         margin-bottom: var(--spacing-500);
+         padding-bottom: var(--spacing-500 );
+    }
+
+    main{
+        width:100%;
+        max-width: 360px;
+        height: calc(max-content + var(--spacing-500)*2);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-100);
+
+
+        margin-top: calc(var(--spacing-500));
+        margin-bottom: calc(var(--spacing-500)*3);
+
+    }
+
+    .card{
+        width: 100%;
+        max-width: 317px;
+        max-height: 250px;
+
+        margin: var(--spacing-100) auto;
+    }
+}
+
